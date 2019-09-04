@@ -1,0 +1,91 @@
+.signup-body {
+    background: url('./alarm-clock-238524_1920.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.signup-modal {
+    margin-right: 20%;
+    /* margin-bottom: 15%; */
+    width: 300px;
+    height: 500px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    outline: purple;
+    box-shadow: 8px 5px 10px #686868;
+    opacity: .85;
+    
+
+
+}
+
+.login-title {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.buttons {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+input {
+    margin-top: 50px;
+    width: 200px;
+    height: 28px;
+    border-radius: 5px;
+    outline: none;
+    background: #e6e6e6;
+    font-size: 25px;
+}
+
+input::placeholder {
+    font-size: 25px;
+}
+
+.login-button {
+    margin: 12px;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.signup-button {
+    margin: 12px;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+

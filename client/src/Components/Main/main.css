@@ -1,0 +1,216 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('./hex-4270275_1920.jpg') no-repeat center center fixed;
+}
+
+.header-container {
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    color: #E2E2E2;
+    display: flex;
+    justify-content: flex-start;
+    /* box-shadow: 5px 1px 15px #2D3142; */
+}
+
+.navbar-left {
+    width: 50%;
+    height: 100%;
+    font-size: 45px;
+    font-weight: bold;
+    /* color: #E88D33; */
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-right {
+    width: 50%;
+    height: 100%;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-right button {
+    /* width: 120px; */
+    height: 90px;
+    font-size: 16px; 
+    font-weight: bold;
+    margin: 5px;
+    background: transparent;
+    color: #E2E2E2;
+    outline: none;
+    border: none;
+}
+
+.navbar-right button:hover {
+    height: 40px;
+    background: rgb(255, 255, 255, .7);
+    color: #212121;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px black;
+}
+
+.body-container {
+    width: 100%;
+    height: calc(100% - 90px);
+}
+
+.welcome-container {
+    width: 100%;
+    height: 100%;
+    color: #E2E2E2;
+    /* background: url('./doors-1767564_1920.png') no-repeat center center; */
+    font-size: 100px;
+    text-align: center;
+
+}
+
+.total-hours {
+    font-size: 50px;
+    width: 90%;
+    height: 80%;
+    margin-top: 40px;
+    margin: 40px auto 0px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.total-box {
+    width: 100%;
+    height: 60%;
+    background: rgb(255, 255, 255, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px 13px black;
+    border-radius: 5px;
+    
+}
+
+.total-title {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.hours-display {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    width: 50%;
+    height: calc(100% - 90px);
+    /* background: blue; */
+    color: #212121;
+    font-weight: bold;
+    margin-right: 20px;
+
+}
+
+.timeclock-container {
+    margin-left: 20px;
+    width: 50%;
+    height: calc(100% - 90px);
+    /* background: purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-size: 16px;
+}
+
+.time-buttons-box {
+    width: 100%;
+    height: 60%;
+    background: rgb(255, 255, 255, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px 13px black;
+    border-radius: 5px; 
+}
+
+.time-button-container {
+    width: 100%;
+    height: 60%;
+    /* background: yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-button {
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #212121;
+    border: 1px solid #212121;
+    outline: none;
+    background: rgb(255, 255, 255, .5);
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px #212121;
+    margin: 10px;
+}
+
+.time-button:hover {
+    background: #212121;
+    color: #C4C5C5;
+    cursor: pointer;
+}
+
+.status-container {
+    width: 100%;
+    height: 30%;
+    /* background: red; */
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.status-box {
+    padding-bottom: 20px;
+    width: 35%;
+    height: 15%;
+    background: rgb(255, 255, 255, .5);
+    /* background: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px #212121;
+}
+
+.introduce-container {
+    font-size: 55px;
+    width: 50%;
+    height: 30%;
+    padding-top: 40px;
+    margin: 20px auto;
+}
+
+.introduce-container1 {
+    font-size: 35px;
+    width: 80%;
+    height: 10%;
+    padding-top: 5%;
+    margin: 20px auto;
+}
