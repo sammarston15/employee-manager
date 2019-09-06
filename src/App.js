@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import moment from 'moment';
-import momentZone from 'moment-timezone';
+import 'moment-timezone';
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./reset.css";
 import "./App.css";
@@ -208,7 +208,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedInAt: moment().format('LLL') //8-24-2019 
+        clockedInAt: moment().tz().format('LLL') //8-24-2019 
       }
       axios.post('/clock-in', body)
       .then(() => {
@@ -232,7 +232,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedOutAt: moment().format('LLL')
+        clockedOutAt: moment().tz().format('LLL')
       }
 
       axios.put('/clock-out', body)
