@@ -27,7 +27,7 @@ massive(process.env.DATABASE_URL)
 
 
 
-app.use(express.static(path.join(__dirname, 'client', 'build')))
+app.use(express.static(path.join(__dirname, 'build')))
 app.use(bodyParser.json());
 app.use(cors({ credentials: true, origin: '*'}));
 
