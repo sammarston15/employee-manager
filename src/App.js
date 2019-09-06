@@ -202,7 +202,7 @@ class App extends Component {
   
 
   handleClockIn = () => {
-    const userZone = moment.tz.guess(true);
+    let userZone = moment.tz.guess(true);
     console.log('sdfghj')
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
     if (clockedIn === false && clockedOut === true) {
@@ -226,7 +226,7 @@ class App extends Component {
   }
 
   handleClockOut = () => {
-    const userZone = moment.tz.guess(true);
+    let userZone = moment.tz.guess(true);
     console.log('hit clock out function');
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
 
