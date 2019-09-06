@@ -199,8 +199,10 @@ class App extends Component {
     }
   };
 
-  handleClockIn = () => {
+  
 
+  handleClockIn = () => {
+    const userZone = moment.tz.guess();
     console.log('sdfghj')
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
     if (clockedIn === false && clockedOut === true) {
@@ -208,7 +210,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedInAt: moment().tz().format('LLL') //8-24-2019 
+        clockedInAt: moment().tz(userZone).format('LLL') //8-24-2019 
       }
       axios.post('/clock-in', body)
       .then(() => {
@@ -224,6 +226,7 @@ class App extends Component {
   }
 
   handleClockOut = () => {
+    const userZone = moment.tz.guess();
     console.log('hit clock out function');
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
 
@@ -232,7 +235,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedOutAt: moment().tz().format('LLL')
+        clockedOutAt: moment().tz(userZone).format('LLL')
       }
 
       axios.put('/clock-out', body)
@@ -273,7 +276,10 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state);
+    // font used -- google's 'Karla' //
+
+
+    console.log(this.state); 
     console.log(this.props);
     return (
       <div className="App">
