@@ -43,5 +43,10 @@ app.get('/time-status', controller.timeStatus);
 app.post('/clock-in', controller.clockIn);
 app.put('/clock-out', controller.clockOut);
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build/index.html'))
+})
 app.listen(process.env.PORT || 8080, () => console.log('ready!!'));
+
+//local testing -- use below app.listen
+// app.listen(8080, () => console.log('working??'));

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import moment from 'moment';
+import momentZone from 'moment-timezone';
 import { Switch, Route, withRouter } from "react-router-dom";
 import "./reset.css";
 import "./App.css";
@@ -8,6 +9,7 @@ import Main from "./Components/Main/Main";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Timecard from './Components/Main/Timecard/Timecard';
+
 
 class App extends Component {
   constructor(props) {
@@ -198,6 +200,7 @@ class App extends Component {
   };
 
   handleClockIn = () => {
+
     console.log('sdfghj')
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
     if (clockedIn === false && clockedOut === true) {
