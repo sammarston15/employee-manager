@@ -10,8 +10,6 @@ require('dotenv').config();
 const app = express();
 
 
-
-
 massive(process.env.DATABASE_URL)
     .then(db => {
         app.set('db', db);
@@ -26,11 +24,9 @@ massive(process.env.DATABASE_URL)
 }));
 
 
-
 app.use(express.static(path.join(__dirname, 'build')))
 app.use(bodyParser.json());
 app.use(cors({ credentials: true, origin: '*'}));
-
 
 
 app.post('/signup', controller.createSignup);
@@ -43,10 +39,12 @@ app.get('/time-status', controller.timeStatus);
 app.post('/clock-in', controller.clockIn);
 app.put('/clock-out', controller.clockOut);
 
+
+//this is a catch all so that your front end always shows up when hosted
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build/index.html'))
 })
-app.listen(process.env.PORT || 8080, () => console.log('ready!!'));
 
-//local testing -- use below app.listen
-// app.listen(8080, () => console.log('working??'));
+
+//this is the listen for the port which heroku is giving your your server through the process.env.PORT 
+app.listen(process.env.PORT || 8080, () => console.log('ready!!'));
