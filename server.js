@@ -47,4 +47,5 @@ app.get('*', (req, res) => {
 
 
 //this is the listen for the port which heroku is giving your your server through the process.env.PORT 
+console.log(process.env.PORT)
 app.listen(process.env.PORT || 8080, () => console.log('ready!!'));
