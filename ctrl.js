@@ -97,7 +97,7 @@ module.exports = {
     const { firstName, lastName, employeeId, clockedInAt } = req.body;
     const newClockIn = db.hours
       .insert({
-        time_in: new Date(clockedInAt),
+        time_in: clockedInAt,
         employee_id: req.session.user.user_id
       })
       .catch(error => console.error(error));
@@ -122,7 +122,7 @@ module.exports = {
         if (result.length) {
           db.hours.update(
             { id: result[result.length - 1].id },
-            { time_out: new Date(clockedOutAt) }
+            { time_out: clockedOutAt }
           );
         }
       })
