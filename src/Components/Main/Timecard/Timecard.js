@@ -35,10 +35,10 @@ export default class Timecard extends Component {
                         {moment(timeIn).tz('America/Boise').format('MM-DD-YYYY')}
                     </td>
                     <td>
-                        {moment(timeIn).tz('Ameican/Boise').format('hh:mm A')}
+                        {moment(timeIn).tz('America/Boise').format('hh:mm A Z')}
                     </td>
                     <td>
-                        { day.timeOut ? moment(timeOut).tz('Ameican/Boise').format('hh:mm A') : '-' }
+                        { day.timeOut ? moment(timeOut).tz('America/Boise').format('hh:mm A Z') : '-' }
                     </td>
                     <td>
                         { day.timeOut ? `${hh}.${mm} hours` : '-' }

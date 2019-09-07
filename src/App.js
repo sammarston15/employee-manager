@@ -210,7 +210,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedInAt: moment().tz("America/Boise").format('LLL') //8-24-2019 
+        clockedInAt: moment().tz().format('LLL') //8-24-2019 
       }
       axios.post('/clock-in', body)
       .then(() => {
@@ -235,7 +235,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedOutAt: moment().tz('America/Boise').format('LLL')
+        clockedOutAt: moment().tz().format('LLL')
       }
 
       axios.put('/clock-out', body)
