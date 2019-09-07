@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import moment from 'moment';
+import 'moment-timezone';
 import { Link } from 'react-router-dom';
 import './timecard.css';
 
@@ -30,7 +31,7 @@ export default class Timecard extends Component {
             console.log(timeOut);
             return (
                 <tr>
-                    <td>
+                    <td> 
                         {moment(timeIn).format('MM-DD-YYYY')}
                     </td>
                     <td>
