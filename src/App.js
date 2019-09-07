@@ -210,7 +210,7 @@ class App extends Component {
         firstName,
         lastName,
         employeeId,
-        clockedInAt: moment().format('LLL') //8-24-2019 
+        clockedInAt: moment().tz("America/Boise").format('LLL') //8-24-2019 
       }
       axios.post('/clock-in', body)
       .then(() => {
