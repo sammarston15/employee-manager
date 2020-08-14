@@ -60,8 +60,8 @@
 }
 
 .body-container {
+    height: auto;
     width: 100%;
-    height: calc(100% - 90px);
     
 }
 
@@ -78,9 +78,9 @@
 .total-hours {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20em;
-    padding: 2em;
-    height: 20%;
+    grid-gap: 5em;
+    padding: 0 20em;
+    height: 200px;
 }
 
 .total-box {
@@ -188,4 +188,25 @@
     height: 10%;
     padding-top: 5%;
     margin: 20px auto;
+}
+
+
+
+
+
+
+
+.online-employees-container {
+    background: rgb(255, 255, 255, .7);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 500px;
+    margin: 5em 5em;
+}
+.online-employees-container > div {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
 }
