@@ -10,12 +10,17 @@ export default class Main extends Component {
   adminUserStyle = () => {
     if (this.props.loggedIn === true && this.props.adminUser === true) {
       return (
-        <Link to='/employees'>
-          <button>EMPLOYEES</button>
-        </Link>
+        <div>
+          <Link to='/employees'>
+            <button>EMPLOYEES</button>
+          </Link>
+          <Link to='/timecard'>
+            <button>TIMECARD</button>
+          </Link>
+        </div>
       )
     }
-    if (this.props.loggedIn === true) {
+    if (this.props.loggedIn === true && this.props.adminUser === false) {
       return (
         <Link to='/timecard'>
           <button>TIMECARD</button>
