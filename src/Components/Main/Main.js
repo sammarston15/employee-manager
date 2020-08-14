@@ -111,7 +111,7 @@ export default class Main extends Component {
               </div>
             </div>
           }
-          {adminUser?
+          {loggedIn && adminUser?
             <div className="online-employees-container">
               <div>
                 display who is currently clocked in here
