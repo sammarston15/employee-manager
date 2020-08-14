@@ -92,7 +92,6 @@ export default class Main extends Component {
             :
 
             <div className="total-hours">
-              <div className="total">
                 <div className="total-box">
                   <div className="total-title">
                     TOTAL HOURS:
@@ -101,14 +100,9 @@ export default class Main extends Component {
                     {totalHours.hh} hours {totalHours.mm} minutes
                   </div>
                 </div>
-              </div>
               <div className="timeclock-container">
-                <div className="time-buttons-box">
-                  <div className="time-button-container">
                     <button className="time-button" onClick={handleClockIn}>CLOCK IN</button>
                     <button className="time-button" onClick={handleClockOut}>CLOCK OUT</button>
-                  </div>
-                  <div className="status-box">
                     <div className="status-container">
                       { clockedIn === true ?
                         <div style={clockedInStyle}>CLOCKED IN</div>
@@ -116,8 +110,6 @@ export default class Main extends Component {
                         <div style={clockedOutStyle}>CLOCKED OUT</div>
                       }
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           }

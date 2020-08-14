@@ -3,7 +3,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('./hex-4270275_1920.jpg') no-repeat center center fixed;
+    /* background: url('./hex-4270275_1920.jpg') no-repeat center center fixed; */
+    background: #2c302e;
 }
 
 .header-container {
@@ -61,6 +62,7 @@
 .body-container {
     width: 100%;
     height: calc(100% - 90px);
+    
 }
 
 .welcome-container {
@@ -74,105 +76,50 @@
 }
 
 .total-hours {
-    font-size: 50px;
-    width: 90%;
-    height: 80%;
-    margin-top: 40px;
-    margin: 40px auto 0px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 2em;
 }
 
 .total-box {
-    width: 100%;
-    height: 60%;
+    
     background: rgb(255, 255, 255, .7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 7px 7px 13px black;
-    border-radius: 5px;
+    
     
 }
 
 .total-title {
     width: 100%;
     height: 40%;
-    display: flex;
-    justify-content: center;
+
 }
 
 .hours-display {
     width: 100%;
     height: 40%;
-    display: flex;
-    justify-content: center;
+    
 }
 
-.total {
-    width: 50%;
-    height: calc(100% - 90px);
-    /* background: blue; */
-    color: #212121;
-    font-weight: bold;
-    margin-right: 20px;
-
-}
 
 .timeclock-container {
-    margin-left: 20px;
-    width: 50%;
-    height: calc(100% - 90px);
-    /* background: purple; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    font-size: 16px;
+    background: rgb(255, 255, 255, .7);
 }
 
 .time-buttons-box {
-    /* background: orange; */
-    width: 100%;
-    height: 60%;
-    background: rgb(255, 255, 255, .7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 7px 7px 13px black;
-    border-radius: 5px; 
+    
 }
 
 .time-button-container {
-    width: 100%;
-    height: 60%;
-    /* background: yellow; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .time-button {
-    width: 200px;
-    height: 100px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #212121;
-    border: 1px solid #212121;
-    outline: none;
-    background: rgb(255, 255, 255, .5);
-    border-radius: 5px;
-    box-shadow: 7px 7px 13px #212121;
-    margin: 10px;
+    
 }
 
 .time-button:hover {
-    background: #212121;
-    color: #C4C5C5;
+    
     cursor: pointer;
 }
 

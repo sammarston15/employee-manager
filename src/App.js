@@ -310,6 +310,7 @@ class App extends Component {
                       clockedOut={this.state.clockedOut}
                       hours={this.state.hours}
                       getThoseHours={this.getThoseHours}
+                      adminUser={this.state.adminUser}
               />}>
             
           </Route>

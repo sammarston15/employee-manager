@@ -13,7 +13,7 @@ export default class Timecard extends Component {
     }
     
     render() {
-        const { loggedIn, firstName, lastName, hours } = this.props;
+        const { loggedIn, firstName, lastName, hours, adminUser } = this.props;
         
 
 
@@ -62,6 +62,12 @@ export default class Timecard extends Component {
                         <Link to='/'>
                             <button>HOME</button>
                         </Link>
+                        {adminUser?
+                        <Link to='/employees'>
+                            <button>EMPLOYEES</button>
+                        </Link>
+                        : null  
+                        }
                         { !loggedIn ?
                         <Link to='/about'>
                             <button>ABOUT</button>
