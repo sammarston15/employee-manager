@@ -1,13 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Employees.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 const Employees = (props) => {
 
-  const { firstName, lastName, loggedIn, handleClockIn, handleClockOut, clockedIn, totalHours, adminUser } = props;
-  console.log('props', props)
+  const { firstName, lastName, loggedIn, handleClockIn, handleClockOut, clockedIn, totalHours, adminUser, employeeList } = props;
 
+  console.log('employeeList', employeeList)
+
+  const employees = employeeList.map((employee, i) => {
+    return(
+      <div className='display-employees' key={i}>
+          <input type="checkbox" name="edit" id=""/>
+          <div>{employee.user_id}</div>
+          <div>{employee.first_name}</div>
+          <div>{employee.last_name}</div>
+          <div>{employee.username}</div>
+      </div>
+    )
+  })
   return (
     <div className='wrapper'>
       <div className="header-container">
@@ -39,7 +52,14 @@ const Employees = (props) => {
         </div>
       </div>
       <div className='employee-body-container'>
-        this is where the employee info needs to go
+        <div className="table-header">
+          <input type="checkbox" name="edit"/>
+          <div>Employee ID</div>
+          <div>First Name</div>
+          <div>Last Name</div>
+          <div>Username</div>
+        </div>
+        {employees}
       </div>
     </div>
   )

@@ -36,6 +36,7 @@ app.get('/user', controller.readEmployee);
 app.get('/hours', controller.getHours);
 app.get('/total-hours', controller.totalHours);
 app.get('/time-status', controller.timeStatus);
+app.get('/api/employees', controller.getEmployeeInfo);
 app.post('/clock-in', controller.clockIn);
 app.put('/clock-out', controller.clockOut);
 

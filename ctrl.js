@@ -172,10 +172,17 @@ module.exports = {
       })
       .catch(error => res.status(500).send(error));
   },
-  // isAdminUser: (req, res, next) => {
-  //   const db = req.app.get('db');
+  getEmployeeInfo: (req, res, next) => {
+    const db = req.app.get("db");
 
-  //   db.query
-  // }
+    const employees = db.query(`
+      SELECT * FROM employees
+      ORDER BY first_name ASC; 
+
+    `).then(response => res.status(200).send(response)).catch(error => {
+        res.status(500).send(error)
+        console.log(error)
+      });
+  }
   
 };

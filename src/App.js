@@ -29,7 +29,8 @@ class App extends Component {
       clockedIn: false,
       clockedOut: true,
       totalHours: '',
-      adminUser: false
+      adminUser: false, 
+      employeeList: []
     };
   }
 
@@ -52,7 +53,6 @@ class App extends Component {
       };
   
       axios.get('/time-status').then(response => {
-        console.log('time status`')
         const status = response.data;
         if(status) {
           this.setState({
@@ -69,6 +69,7 @@ class App extends Component {
             console.log(error)
     })
 
+    axios.get('/api/employees').then(response => this.setState({employeeList: response.data})).catch(error => console.log(error));
 
     // let promises = [];
     //   promises.push(axios.get('/user'))
@@ -143,7 +144,6 @@ class App extends Component {
       const loginResponse = await axios.post("/login", body);
 
       const { user, message } = loginResponse.data;
-      console.log(user);
       if (!this.state.loggedIn) {
         this.getThoseHours();
         this.setState({
@@ -156,7 +156,6 @@ class App extends Component {
           this.setState({ adminUser: true });
         }
         await axios.get('/time-status').then(response => {
-          console.log('time status`')
           const status = response.data;
           if(status) {
             this.setState({
@@ -204,7 +203,6 @@ class App extends Component {
 
   handleClockIn = () => {
     let userZone = moment.tz.guess(true);
-    console.log('sdfghj')
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
     if (clockedIn === false && clockedOut === true) {
       const body = { 
@@ -228,7 +226,6 @@ class App extends Component {
 
   handleClockOut = () => {
     let userZone = moment.tz.guess(true);
-    console.log('hit clock out function');
     const { clockedIn, clockedOut, firstName, lastName, employeeId } = this.state;
 
     if (clockedIn === true && clockedOut === false) {
@@ -272,6 +269,7 @@ class App extends Component {
       this.setState({totalHours: response.data});
     }).catch(error => console.log(error))
   }
+
 
 
 
@@ -328,6 +326,7 @@ class App extends Component {
                     handleClockOut={this.handleClockOut}
                     totalHours={this.state.totalHours}
                     adminUser={this.state.adminUser}
+                    employeeList={this.state.employeeList}
               />
             </Route>
             :
