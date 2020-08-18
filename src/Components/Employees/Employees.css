@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.employee-body-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

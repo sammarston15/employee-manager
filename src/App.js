@@ -9,6 +9,7 @@ import Main from "./Components/Main/Main";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Timecard from './Components/Main/Timecard/Timecard';
+import Employees from './Components/Employees/Employees';
 
 
 class App extends Component {
@@ -314,6 +315,24 @@ class App extends Component {
               />}>
             
           </Route>
+          {this.state.adminUser?
+            <Route path="/employees" component={Employees}>
+              <Employees loggedIn={this.state.loggedIn}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    killSession={this.killSession}
+                    employeeId={this.state.employeeId}
+                    clockedIn={this.state.clockedIn}
+                    clockedOut={this.state.clockedOut}
+                    handleClockIn={this.handleClockIn}
+                    handleClockOut={this.handleClockOut}
+                    totalHours={this.state.totalHours}
+                    adminUser={this.state.adminUser}
+              />
+            </Route>
+            :
+            null
+          }
           <Route path="/login" component={Login}>
             <Login handleChange={this.handleChange}
                    handleLogin={this.handleLogin}
