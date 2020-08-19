@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import '../../reset.css';
 import './Employees.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -12,13 +13,13 @@ const Employees = (props) => {
 
   const employees = employeeList.map((employee, i) => {
     return(
-      <div className='display-employees' key={i}>
-          <input type="checkbox" name="edit" id=""/>
-          <div>{employee.user_id}</div>
-          <div>{employee.first_name}</div>
-          <div>{employee.last_name}</div>
-          <div>{employee.username}</div>
-      </div>
+      <tr className='display-employees' key={i}>
+          <td><input type="checkbox"/></td>
+          <td>{employee.user_id}</td>
+          <td>{employee.first_name}</td>
+          <td>{employee.last_name}</td>
+          <td>{employee.username}</td>
+      </tr>
     )
   })
   return (
@@ -52,14 +53,18 @@ const Employees = (props) => {
         </div>
       </div>
       <div className='employee-body-container'>
-        <div className="table-header">
-          <input type="checkbox" name="edit"/>
-          <div>Employee ID</div>
-          <div>First Name</div>
-          <div>Last Name</div>
-          <div>Username</div>
-        </div>
-        {employees}
+        <div>Employees</div>
+        <button>EDIT</button>
+        <table>
+          <tr>
+            <th></th>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          {employees}
+        </table>
       </div>
     </div>
   )
