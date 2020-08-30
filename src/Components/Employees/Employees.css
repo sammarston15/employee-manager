@@ -62,7 +62,7 @@
   height: 15px;
   width: 15px;
 }
-.employee-body-container table tr th:first-child, .employee-body-container table tr td:first-child {
+.employee-body-container table thead tr th:first-child, .employee-body-container table tbody tr td:first-child {
   text-align: center;
   vertical-align: middle;
 }

@@ -42,7 +42,7 @@ export default class Timecard extends Component {
     // console.log(hours[0])
 
     return (
-      <div className='wrapper'>
+      <div className='wrapper-timecard'>
         <div className="header-container">
           {!loggedIn ? (
             <div className="navbar-left">EMPLOYEE TIME</div>
@@ -80,8 +80,8 @@ export default class Timecard extends Component {
             )}
           </div>
         </div>
-        <div className='employee-body-container'>
-        <div>Timecard</div>
+        <div className='timecard-body-container'>
+        <div>My Timecard</div>
         {/* <button>EDIT</button> */}
         <table>
           <thead>

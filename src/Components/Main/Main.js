@@ -33,7 +33,6 @@ export default class Main extends Component {
 
 
   render() {
-
     const { firstName, lastName, loggedIn, handleClockIn, handleClockOut, clockedIn, totalHours, adminUser } = this.props;
     // console.log(this.props);
     // debugger

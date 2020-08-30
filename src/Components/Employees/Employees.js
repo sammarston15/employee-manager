@@ -14,7 +14,11 @@ const Employees = (props) => {
   const employees = employeeList.map((employee, i) => {
     return(
       <tr className='display-employees' key={i}>
-          <td><input type="checkbox"/></td>
+          <td>
+            <form action="">
+              <input type="checkbox"/>
+            </form>
+          </td>
           <td>{employee.user_id}</td>
           <td>{employee.first_name}</td>
           <td>{employee.last_name}</td>

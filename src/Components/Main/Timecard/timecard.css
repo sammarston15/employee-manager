@@ -1,4 +1,4 @@
-.wrapper {
+.wrapper-timecard {
     display: flex;
     flex-direction: column;
     background: #232323;
@@ -6,7 +6,7 @@
   }
   
   
-  .employee-body-container {
+  .timecard-body-container {
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -15,11 +15,11 @@
     border-radius: 3px;
     padding: 5px;
   }
-  .employee-body-container table {
+  .timecard-body-container table {
     margin: 0;
     margin-top: 5px;
   }
-  .employee-body-container div {
+  .timecard-body-container div {
     margin: 0;
     color: #fff;
     background: #84bc9c;
@@ -32,28 +32,28 @@
     text-transform: uppercase;
     font-size: 1.5em;
   }
-  .employee-body-container button {
+  .timecard-body-container button {
     align-self: flex-end;
   }
   
-  .employee-body-container table thead tr th {
+  .timecard-body-container table thead tr th {
     font-weight: bold;
     background: #84bc9c;
     height: 40px;
     text-align: center;
     vertical-align: middle;
 }
-  .employee-body-container table tbody tr td {
+  .timecard-body-container table tbody tr td {
     margin: 0;
     padding: 0;
     height: 40px;
     text-align: center;
     vertical-align: middle;
   }
-  .employee-body-container table tr:nth-child(even) {
+  .timecard-body-container table tr:nth-child(even) {
     background: #95adb6;
   }
-  .employee-body-container table tr:nth-child(odd) {
+  .timecard-body-container table tr:nth-child(odd) {
     background: #ebf5df;
   }
   /* .employee-body-container table tr th input, .employee-body-container table tr td input {

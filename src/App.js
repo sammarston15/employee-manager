@@ -71,44 +71,6 @@ class App extends Component {
 
     axios.get('/api/employees').then(response => this.setState({employeeList: response.data})).catch(error => console.log(error));
 
-    // let promises = [];
-    //   promises.push(axios.get('/user'))
-    //   promises.push(axios.get('/hours'))
-    //   promises.push(axios.get('/time-status'))
-
-    // // Promise.all([
-    // //   axios.get('/user'),
-    // //   axios.get('/hours'),
-    // //   axios.get('/time-status')
-    // // ])
-   
-    // .then(response => {
-    //   console.log('we in it')
-    //   const user = response[0].data;
-    //   const hours = response[1].data.map(e => ({ timeIn: e.time_in, timeOut: e.time_out }));
-    //   const status = response[2].data;
-    //   console.log(response.data)
-
-    //   this.setState({
-    //     employeeId: user.user_id,
-    //     firstName: user.first_name,
-    //     lastName: user.last_name,
-    //     username: user.username,
-    //     loggedIn: true,
-    //     hours: hours
-    //   })
-
-    //   if(status) {
-    //     this.setState({
-    //       clockedIn: true,
-    //       clockedOut: false
-    //     })
-    //   }
-    //   debugger
-    // }).catch(error => {
-    //   console.log('something brokeded')
-    //   console.log(error)
-    // })
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -193,6 +155,7 @@ class App extends Component {
       const { data: signoutMessage } = await axios.get("/signout");
 
       this.props.history.push("/");
+      
       alert("Successfully logged out!");
     } catch (error) {
       console.error(error);

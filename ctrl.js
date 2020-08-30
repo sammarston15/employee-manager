@@ -40,6 +40,7 @@ module.exports = {
         message: "Successfully logged in!"
       };
       res.send(userInfo);
+      location.reload(console.log('reloaded'));
     } catch (error) {
       console.error(error);
       res.status(500).send(error);
@@ -75,7 +76,11 @@ module.exports = {
   },
   sessionDestroy: async (req, res, next) => {
     try {
-      req.session.destroy(() => res.send("successfully logged out"));
+      req.session.destroy(() => {
+        res.send("successfully logged out");
+        
+      });
+      
     } catch (error) {
       console.error(error);
       res.status(500).send(error);
