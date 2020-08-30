@@ -9,7 +9,7 @@ const Employees = (props) => {
 
   const { firstName, lastName, loggedIn, handleClockIn, handleClockOut, clockedIn, totalHours, adminUser, employeeList } = props;
 
-  console.log('employeeList', employeeList)
+  // console.log('employeeList', employeeList)
 
   const employees = employeeList.map((employee, i) => {
     return(
@@ -56,14 +56,18 @@ const Employees = (props) => {
         <div>Employees</div>
         <button>EDIT</button>
         <table>
-          <tr>
-            <th></th>
-            <th>Employee ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-          {employees}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            {employees}
+          </tbody>
         </table>
       </div>
     </div>

@@ -76,7 +76,7 @@ class App extends Component {
       const loginResponse = await axios.post("/login", body);
 
       const { user, message } = loginResponse.data;
-      console.log(user);
+      // console.log(user);
       if (!this.state.loggedIn) {
         this.setState({
           loggedIn: !this.state.loggedIn,
@@ -116,7 +116,7 @@ class App extends Component {
   handleGetHours() {
     axios.get('/hours')
       .then(response => {
-        console.log(response)
+        // console.log(response)
         this.setState({
           hours: '',
           timeIn: response.data.time_in,
@@ -130,8 +130,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
-    console.log(this.props);
+    // console.log(this.state);
+    // console.log(this.props);
     return (
       <div className="App">
         <Switch>

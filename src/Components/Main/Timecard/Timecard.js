@@ -28,7 +28,7 @@ export default class Timecard extends Component {
             let hh = total.hours();
             let mm = total.minutes();
             let ss = total.seconds();
-            console.log(timeOut);
+            // console.log(timeOut);
             return (
                 <tr>
                     <td> 
@@ -48,7 +48,7 @@ export default class Timecard extends Component {
             )
         })
         
-        console.log(hours[0])
+        // console.log(hours[0])
 
         return (
             <div className="timecard-body">

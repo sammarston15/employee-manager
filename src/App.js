@@ -261,7 +261,6 @@ class App extends Component {
   }
 
   displayTotalHours = () => {
-    console.log('total hours please?')
     const body = {
       user_id: this.state.employeeId
     }
@@ -278,8 +277,6 @@ class App extends Component {
     // font used -- google's 'Karla' //
 
 
-    console.log(this.state); 
-    console.log(this.props);
     return (
       <div className="App">
         <Switch>
